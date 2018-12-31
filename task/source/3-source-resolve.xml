@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="source-test" default="lsProps" basedir="." description="Legacy code project">
+
+<!--source:resolve tasks -->
+<target name="source:resolve:dependencies" hidden="true">
+	<echo>Pas de fichier composer !</echo>
+</target>
+
+</project>

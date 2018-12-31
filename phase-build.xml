@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build" default="lsProps" basedir="./bin/build" description="Legacy code project">
+ 
+  <import file="task-build.xml" />
+ 
+ <target name="source:clone" description="1-Copy source and test dir to a build dir" depends="source:clone:project"  />
+
+ <target name="source:score" depends="source:clone, source:score:report" description="2-Analyse source and test written quality" />
+
+ <target name="source:resolve" depends="source:score,source:resolve:dependencies" description="3-Resolve source dependencies"  />
+
+ <target name="source:test" depends="source:resolve, source:test:report" description="4-Execute unit tests" />
+	
+ <target name="source:deploy" depends="source:test, source:deploy:target" description="5-Deploy source code" />
+
+ <target name="source:package" depends="source:deploy,source:package:doc, source:package:cli" description="6-Transform source code into binary format" />
+
+ <target name="binary:resolve" depends="source:package,binary:resolve:dependencies" description="7-Current build's external dependencies installation to make the app to run" />
+
+ <target name="binary:install" depends="binary:resolve,binary:install:target" description="8-Current build installation on specific infrastructure" />
+
+ <target name="binary:test" depends="binary:install,binary:test:report" description="9-Execute functionnal tests" />
+
+ <target name="binary:score" depends="binary:test,binary:score:report" description="10-Execute performance tests" /> 
+
+ <target name="binary:deploy" depends="binary:score, binary:deploy:target" description="11-Deploy binary" />
+ 
+ <target name="version" depends="binary:deploy" description="Build specific version of your project">
+	 
+	 <phingcall target="version:${build.profil}">
+			<property name="origin" value="${build.name}-${build.tag}-${build.type}"/>						 
+	 </phingcall>	
+
+</target>
+  
+</project>

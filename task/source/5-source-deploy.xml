@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="source-test" default="lsProps" basedir="." description="Legacy code project">
+
+<target name="source:deploy:target" depends="source:deploy:version" hidden="true">
+	
+	
+</target>
+
+<target name="source:deploy:version" if="build.tag" description="Set a git tag and push it according to -Dbuild.version parameter" hidden="true">
+	
+	    <echo> TODO !</echo>     
+</target>
+
+</project>

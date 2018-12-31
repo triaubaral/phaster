@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="source-test" default="lsProps" basedir="." description="Legacy code project">
+
+
+<!--binary:resolve tasks -->
+<target name="binary:resolve:dependencies" hidden="true">
+	<echo> TODO !</echo>
+</target>
+
+</project>

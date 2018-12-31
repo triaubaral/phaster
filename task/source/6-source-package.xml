@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="source-test" default="lsProps" basedir="." description="Legacy code project">
+
+
+<target name="source:package:cli" description="Packages code for cli" depends="source:package:prepare, source:package:phar, source:package:setModeExec" hidden="true">
+  
+	<echo>Package complete</echo>
+
+</target>
+
+<target name="source:package:prepare" hidden="true">
+
+	<echo> TODO !</echo>
+
+</target>
+
+<target name="source:package:setModeExec" hidden="true">
+   <echo> TODO !</echo>
+</target>
+
+<target name="source:package:doc" description="Generate HTML documentation" hidden="true">
+    
+   <echo> TODO !</echo>
+
+</target>
+
+<target name="source:package:phar" hidden="true">
+
+	<echo> TODO !</echo>
+
+</target>
+
+
+</project>

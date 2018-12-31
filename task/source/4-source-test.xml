@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="source-test" default="lsProps" basedir="." description="Legacy code project">
+
+<!--source:test tasks -->
+
+<target name="source:test:report" depends="source:test:phpunit, source:test:coverage" description="Generate HTML coverage report" hidden="true">
+    <echo> TODO !</echo>
+</target>
+
+<target name="source:test:phpunit" description="Run phpunit tests" hidden="true">
+   <echo> TODO !</echo>
+</target>
+
+<target name="source:test:coverage" description="Run tests coverage report" hidden="true">
+    <echo> TODO !</echo>
+</target>
+
+</project>

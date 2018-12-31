@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="build" default="lsProps" basedir="./bin/build" description="Legacy code project">
+ 
+  <import file="phase-build.xml" />
+  
+</project>

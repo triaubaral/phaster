@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="source-test" default="lsProps" basedir="." description="Legacy code project">
+
+
+<target name="source:score:report" depends="source:score:sonar, source:score:cs" hidden="true" />
+
+
+<!--source:score tasks -->
+<target name="source:score:sonar" description="Run Sonar analysis" hidden="true">
+<echo> TODO !</echo>
+</target>
+
+<target name="source:score:cs" description="Run code sniffer analysis" hidden="true">
+
+  <echo> TODO !</echo>
+
+</target>
+
+<target name="source:score:quality:fixup" depends="source:score:cbf" description="Autofix code according to code sniffer rules" hidden="true">
+    <echo> TODO !</echo> 
+</target>
+
+<target name="source:score:cbf" description="Run code auto fixer" hidden="true">
+
+  <echo> TODO !</echo>
+
+</target>
+
+
+
+</project>
