@@ -1,5 +1,36 @@
 {
+    "name": "triaubaral/phaster",
+    "description": "Collection of meta tasks based on phing in order to make your build process easy.",
+    "keywords": ["build", "tool", "task", "phing", "phaster", "meta-task"],
+    "homepage": "https://github.com/triaubaral/phaster/tree/master",
+    "license": "LGPL-3.0",
+    "authors": [
+        {
+            "name": "Aurélien Tricoire",
+            "email": "aurelien.tricoire@free.fr"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/triaubaral/phaster/issues"
+    },
+    "require": {
+        "php": ">=5.2.0",
+        "symfony/yaml": "^3.1 || ^4.0"
+    },
     "require-dev": {
-        "phing/phing": "2.*"
+        "phing/phing": "2.*"        
+    },
+    "autoload": {
+        "classmap": ["src/phaster"]
+    },
+    "include-path": ["src"],
+    "bin": [
+        "bin/phaster"
+    ],
+    "config": {
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phaster-init": "phpunit"
     }
 }

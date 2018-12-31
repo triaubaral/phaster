@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="phaster" default="lsProps" basedir="src/phaster" description="Collection of meta task based on phing in order to make your build process easy">
+ 
+  <import file="phase-build.xml" />
+  
+</project>

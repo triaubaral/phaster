@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="TaskRunner" default="lsProps" basedir="." description="Legacy code project">
+<project name="task-build" default="lsProps" basedir="." description="Shared tasks collection">
 
  <property name="build.build.dir" value="target/build"/>
  <property name="build.install.bin.dir" value="target/install"/>
