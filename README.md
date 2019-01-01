@@ -1,2 +1,65 @@
-# phaster
-Collection of meta tasks based on phing in order to make your build process easy
+#Phaster
+
+Collection of meta tasks based on phing in order to make your build process easy.
+
+##Installation
+
+The installation of phaster is a two steps process. First you install phaster with composer then your need to execute a custom phing script.
+
+1. **Composer**
+
+  The preferred method to install Phaster is through [Composer](https://getcomposer.org/).
+  Add [triaubaral/phaster](https://packagist.org/packages/triaubaral/phaster) to the
+  require-dev or require section of your project's `composer.json`
+  configuration file, and run 'composer install':
+
+         {
+	    "require": {
+                 "triaubaral/phaster": "@dev"       
+            },
+	    "require-dev": {
+                 "phing/phing": "^2.16"
+             }
+          }
+
+2. **Custom Phing Script**
+
+Copy/paste the following command in your terminal
+
+    ./vendor/bin/phing -f vendor/triaubaral/phaster/build.xml phaster::install
+
+It installs into src/resources/phaster a directory tree contening all meta tasks
+It installs into the directory where the preceding command has been done a build.xml file
+
+##Check your installation
+
+Running ./vendor/bin/phing -l will give the following output :
+
+Buildfile: /home/solid/tmp/exo/build.xml
+Warning: target '01:source:clone' has no tasks or dependencies
+Collection of meta task based on phing in order to make your build process easy
+Default target:
+-------------------------------------------------------------------------------
+ phaster:props
+
+Main targets:
+-------------------------------------------------------------------------------
+ 01:source:clone     Copy source and test dir to a build dir
+ 02:source:score     Analyse source and test written quality
+ 03:source:resolve   Resolve source dependencies
+ 04:source:test      Execute unit tests
+ 05:source:deploy    Deploy source code
+ 06:source:package   Transform source code into binary format
+ 07:binary:resolve   Current build's external dependencies installation to make the app to run
+ 08:binary:install   Current build installation on specific infrastructure
+ 09:binary:test      Execute functionnal tests
+ 10:binary:score     Execute performance tests
+ 11:binary:deploy    Deploy binary
+ 12:project:version  Build specific version of your project
+
+## How it works !
+
+As mentionned above those tasks are meta !! You have to implement them in order to feet your current build need.
+They are only the representation of what I consider a quality build.
+
+
