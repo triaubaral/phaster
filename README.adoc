@@ -1,8 +1,8 @@
-#Phaster
+= Phaster
 
 Collection of meta tasks based on phing in order to make your build process easy.
 
-##Installation
+== Installation
 
 The installation of phaster is a two steps process. First you install phaster with composer then your need to execute a custom phing script.
 
@@ -31,10 +31,12 @@ Copy/paste the following command in your terminal
 It installs into src/resources/phaster a directory tree contening all meta tasks
 It installs into the directory where the preceding command has been done a build.xml file
 
-##Check your installation
+== Check your installation
 
 Running ./vendor/bin/phing -l will give the following output :
 
+[source, bash]
+----
 Buildfile: /home/solid/tmp/exo/build.xml
 Warning: target '01:source:clone' has no tasks or dependencies
 Collection of meta task based on phing in order to make your build process easy
@@ -56,8 +58,9 @@ Main targets:
  10:binary:score     Execute performance tests
  11:binary:deploy    Deploy binary
  12:project:version  Build specific version of your project
+----
 
-## How it works !
+== How it works !
 
 As mentionned above those tasks are meta !! You have to implement them in order to feet your current build need.
 They are only the representation of what I consider a quality build.
