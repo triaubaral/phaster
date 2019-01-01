@@ -6,8 +6,7 @@
 	<property name="profil" value="dev" />	
 	<property name="resources.dir" value="src/resources/phaster" />
 	<property name="install.dir" value="${resources.dir}/${profil}" />
-	<!--property name="install.dir" value="phaster/${profil}" /-->
-	<property name="from.resources.dir" value="${resources.dir}" />
+	<property name="from.resources.dir" value="vendor/triaubaral/phaster/${resources.dir}" />
 	
     <mkdir dir="${install.dir}" />
   
@@ -17,8 +16,7 @@
 	  </fileset>
 	</copy>
 		
-	<symlink target="${install.dir}/phaster-build.xml" link="build.xml" />
-  
+	<move file="${install.dir}/phaster-build.xml" tofile="build.xml" overwrite="false"/>
 	
   </target>
   

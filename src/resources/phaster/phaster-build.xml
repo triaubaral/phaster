@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="phaster" default="phaster:props" basedir="src/resources/phaster" description="Collection of meta task based on phing in order to make your build process easy">
+<project name="phaster" default="phaster:props" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
  
  <property name="build.build.dir" value="target/build"/>
  <property name="build.install.bin.dir" value="target/install"/>
@@ -9,17 +9,25 @@
  <property name="build.test.dir" value="test"/>
  <property name="build.doc.dir" value="${build.build.dir}/docs"/>
  <property name="build.report.dir" value="${build.build.dir}/reports"/>
- 
- 
- <property name="build.tools.dir" value="/home/solid/tools" />
- <property name="sonar.bin.dir" value="${build.tools.dir}/sonar/sonar-scanner-3.2/bin" />
- <property name="php.bin.dir" value="${build.tools.dir}/php/bin"/>
- 
+ <property name="build.phaster.dir" value="src/resources/phaster" />
  <property name="build.author" value="Solid Design"/>
  <property name="build.email" value="solid.design.com"/>
  <property name="build.profil" value="dev" />
  
- <import file="${build.profil}/.phaster-common.xml" />
- <import file="${build.profil}/.phaster-phase.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/.phaster-common.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/.phaster-phase.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/1-source-clone.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/2-source-score.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/3-source-resolve.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/4-source-test.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/5-source-deploy.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/6-source-package.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/binary/7-binary-resolve.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/binary/8-binary-install.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/binary/9-binary-test.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/binary/10-binary-score.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/binary/11-binary-deploy.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/12-project-version.xml" />
+ 
   
 </project>
