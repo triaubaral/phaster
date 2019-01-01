@@ -19,18 +19,5 @@
     },
     "require-dev": {
         "phing/phing": "2.*"        
-    },
-    "autoload": {
-        "classmap": ["src/phaster"]
-    },
-    "include-path": ["src"],
-    "bin": [
-        "bin/phaster"
-    ],
-    "config": {
-        "bin-dir": "bin"
-    },
-    "scripts": {
-        "phaster-init": "phpunit"
     }
 }
