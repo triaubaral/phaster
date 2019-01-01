@@ -8,19 +8,22 @@ The installation of phaster is a two steps process. First you install phaster wi
 
 1. **Composer**
 
-  The preferred method to install Phaster is through [Composer](https://getcomposer.org/).
-  Add [triaubaral/phaster](https://packagist.org/packages/triaubaral/phaster) to the
-  require-dev or require section of your project's `composer.json`
-  configuration file, and run 'composer install':
+The preferred method to install Phaster is through [Composer](https://getcomposer.org/).
+Add [triaubaral/phaster](https://packagist.org/packages/triaubaral/phaster) to the
+require-dev or require section of your project's `composer.json`
+configuration file, and run 'composer install':
+[source, bash]
+----
+ {
+	"require": {
+		 "triaubaral/phaster": "@dev"       
+	},
+	"require-dev": {
+		 "phing/phing": "^2.16"
+	 }
+  }
 
-         {
-	    "require": {
-                 "triaubaral/phaster": "@dev"       
-            },
-	    "require-dev": {
-                 "phing/phing": "^2.16"
-             }
-          }
+----
 
 2. **Custom Phing Script**
 
@@ -33,7 +36,14 @@ It installs into the directory where the preceding command has been done a build
 
 == Check your installation
 
-Running ./vendor/bin/phing -l will give the following output :
+The command :
+
+[source, bash]
+----
+ ./vendor/bin/phing -l  
+---- 
+
+will give the following output :
 
 [source, bash]
 ----
