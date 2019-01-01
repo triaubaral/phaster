@@ -29,7 +29,7 @@ configuration file, and run 'composer install':
 
 Copy/paste the following command in your terminal
 
-    ./vendor/bin/phing -f vendor/triaubaral/phaster/build.xml phaster::install
+    ./vendor/bin/phing -f vendor/triaubaral/phaster/build.xml phaster:install
 
 It installs into src/resources/phaster a directory tree contening all meta tasks
 It installs into the directory where the preceding command has been done a build.xml file

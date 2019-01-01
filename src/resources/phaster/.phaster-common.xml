@@ -32,7 +32,7 @@
 
  </target>
 
-<target name="wait:input:fail">
+<target name="wait:input:fail" hidden="true">
 	<fail message="Le build a été interrompu par une action humaine"/>
 </target>
 
