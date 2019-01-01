@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="phaster" default="phaster:props" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
+ 
+ <import file="source/1-source-clone.xml" />
+ <import file="source/2-source-score.xml" />
+ <import file="source/3-source-resolve.xml" />
+ <import file="source/4-source-test.xml" />
+ <import file="source/5-source-deploy.xml" />
+ <import file="source/6-source-package.xml" />
+ <import file="binary/7-binary-resolve.xml" />
+ <import file="binary/8-binary-install.xml" />
+ <import file="binary/9-binary-test.xml" />
+ <import file="binary/10-binary-score.xml" />
+ <import file="binary/11-binary-deploy.xml" />
+ <import file="12-project-version.xml" />
+ 
+ <target name="01:source:clone" description="Copy source and test dir to a build dir" />
+
+ <target name="02:source:score" depends="01:source:clone, source:score:main" description="Analyse source and test written quality" />
+
+ <target name="03:source:resolve" depends="02:source:score,source:resolve:main" description="Resolve source dependencies"  />
+
+ <target name="04:source:test" depends="03:source:resolve, source:test:main" description="Execute unit tests" />
+	
+ <target name="05:source:deploy" depends="04:source:test, source:deploy:main" description="Deploy source code" />
+
+ <target name="06:source:package" depends="05:source:deploy,source:package:main" description="Transform source code into binary format" />
+
+ <target name="07:binary:resolve" depends="06:source:package,binary:resolve:main" description="Current build's external dependencies installation to make the app to run" />
+
+ <target name="08:binary:install" depends="07:binary:resolve,binary:install:main" description="Current build installation on specific infrastructure" />
+
+ <target name="09:binary:test" depends="08:binary:install,binary:test:main" description="Execute functionnal tests" />
+
+ <target name="10:binary:score" depends="09:binary:test,binary:score:main" description="Execute performance tests" /> 
+
+ <target name="11:binary:deploy" depends="10:binary:score, binary:deploy:main" description="Deploy binary" />
+ 
+ <target name="12:project:version" depends="11:binary:deploy, project:version:main" description="Build specific version of your project" />
+  
+</project>

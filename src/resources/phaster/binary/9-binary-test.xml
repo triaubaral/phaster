@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="binaray:test" default="binaray:test:main" basedir=".">
+
+<!--binary:test tasks -->
+<target name="binary:test:main" hidden="true">
+	<echo> TODO !</echo>
+</target>
+
+</project>

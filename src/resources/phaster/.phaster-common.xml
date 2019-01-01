@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="phaster-common" default="phaster:props" basedir="." description="Shared tasks collection">
+
+ <target name="phaster:props" hidden="true" description="Displays all properties prefixed by project keyword."> 
+  <echoproperties prefix="build."/>
+ </target>
+
+ <target name="source:first:commit" hidden="true">
+	<property name="gitRepoURL" value="solid@192.168.1.41:solid/trivia.git" />
+	<exec command="git init" />
+	<exec command="git add ." />
+	<exec command="git commit -m 'first commit'" />
+	<exec command="git remote add origin ${gitRepoURL}" />
+	<exec command="git push -u origin master" />
+ </target>
+
+ <target name="wait:input" hidden="true">
+	
+	<property name="failTarget" value="wait:input:fail" />
+
+	<propertyprompt propertyName="isActionsDone" defaultValue=" OK " promptText="Are all human actions done (OK/KO) ?" />
+
+	<if>
+	 <equals arg1="${isActionsDone}" arg2="OK" trim="yes" />
+	 <then>
+		<phingcall target="${nextTarget}" />
+	 </then>
+	 <else>
+		<phingcall target="${failTarget}" />
+	 </else>
+	</if>
+
+ </target>
+
+<target name="wait:input:fail">
+	<fail message="Le build a été interrompu par une action humaine"/>
+</target>
+
+</project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="phaster" default="phaster:install" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
+ 
+  <target name="phaster:install">
+  
+	<property name="profil" value="dev" />	
+	<property name="resources.dir" value="src/resources/phaster" />
+	<property name="install.dir" value="${resources.dir}/${profil}" />
+	<!--property name="install.dir" value="phaster/${profil}" /-->
+	<property name="from.resources.dir" value="${resources.dir}" />
+	
+    <mkdir dir="${install.dir}" />
+  
+	<copy todir="${install.dir}" >
+	  <fileset dir="${from.resources.dir}">
+		<include name="**/**" />
+	  </fileset>
+	</copy>
+		
+	<symlink target="${install.dir}/phaster-build.xml" link="build.xml" />
+  
+	
+  </target>
+  
+  
+  
+</project>

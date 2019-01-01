@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="binary:deploy" default="binary:deploy:main" basedir=".">
+
+<!--binary:deploy tasks -->
+<target name="binary:deploy:main" description="Deploy project's phar to deploy directory" hidden="true">
+	<echo> TODO !</echo>
+
+</target>
+
+</project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="binary:install" default="binaray:install:main" basedir=".">
+
+<!--binary:install tasks -->
+<target name="binary:install:main" description="Install binary to a specific location" hidden="true">
+
+	<echo> TODO !</echo>
+
+</target>
+
+
+</project>
