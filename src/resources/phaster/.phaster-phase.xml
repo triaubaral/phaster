@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="phaster" default="phaster:props" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
  
- <target name="01:source:clone" description="Copy source and test dir to a build dir" />
+ <target name="01:source:clone" depends="source:clone:main" description="Copy source and test dir to a build dir" />
 
  <target name="02:source:score" depends="01:source:clone, source:score:main" description="Analyse source and test written quality" />
 
