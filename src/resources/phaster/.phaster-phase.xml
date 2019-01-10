@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="phaster" default="phaster:props" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
  
- <target name="01:source:clone" depends="source:clone:main" description="Copy source and test dir to a build dir" />
-
- <target name="02:source:score" depends="01:source:clone, source:score:main" description="Analyse source and test written quality" />
-
- <target name="03:source:resolve" depends="02:source:score,source:resolve:main" description="Resolve source dependencies"  />
-
- <target name="04:source:test" depends="03:source:resolve, source:test:main" description="Execute unit tests" />
-	
- <target name="05:source:deploy" depends="04:source:test, source:deploy:main" description="Deploy source code" />
-
- <target name="06:source:package" depends="05:source:deploy,source:package:main" description="Transform source code into binary format" />
-
- <target name="07:binary:resolve" depends="06:source:package,binary:resolve:main" description="Current build's external dependencies installation to make the app to run" />
-
- <target name="08:binary:install" depends="07:binary:resolve,binary:install:main" description="Current build installation on specific infrastructure" />
-
- <target name="09:binary:test" depends="08:binary:install,binary:test:main" description="Execute functionnal tests" />
-
- <target name="10:binary:score" depends="09:binary:test,binary:score:main" description="Execute performance tests" /> 
-
- <target name="11:binary:deploy" depends="10:binary:score, binary:deploy:main" description="Deploy binary" />
+ <target name="00:source:prepare" depends="source:prepare:main" description="Clean working dir" />
+  
+ <target name="01:source:clone" depends="00:source:prepare,source:clone:main" description="Copy source and test dir to a build dir" />
  
- <target name="12:project:version" depends="11:binary:deploy, project:version:main" description="Build specific version of your project" />
+ <target name="02:source:resolve" depends="01:source:clone,source:resolve:main" description="Resolve source dependencies"  />
+ 
+ <target name="03:source:compile" depends="02:source:resolve,source:compile:main" description="Compile source code"  />
+
+ <target name="04:source:score" depends="03:source:compile, source:score:main" description="Analyse source and test written quality" />
+
+ <target name="05:source:test" depends="04:source:score, source:test:main" description="Execute unit tests" />
+	
+ <target name="06:source:tag" depends="05:source:test, source:tag:main" description="Deploy source code" />
+
+ <target name="07:source:package" depends="06:source:tag,source:package:main" description="Transform source code into binary format" />
+ 
+ <target name="08:binary:deploy" depends="07:source:package, binary:deploy:main" description="Deploy binary" />
+
+ <target name="09:binary:resolve" depends="08:binary:deploy,binary:resolve:main" description="Current build's external dependencies installation to make the app to run" />
+
+ <target name="10:binary:host" depends="09:binary:resolve,binary:host:main" description="Current build installation on specific infrastructure" />
+
+ <target name="11:binary:test" depends="10:binary:host,binary:test:main" description="Execute functionnal tests" />
+
+ <target name="12:binary:score" depends="11:binary:test,binary:score:main" description="Execute performance tests" /> 
+ 
+ <target name="13:project:version" depends="12:binary:score, project:version:main" description="Build specific version of your project" />
   
 </project>

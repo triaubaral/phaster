@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="source:tag" default="source:tag:main" basedir=".">
+
+<target name="source:tag:main" hidden="true">
+	
+	<echo> TODO !</echo>
+	
+</target>
+
+</project>

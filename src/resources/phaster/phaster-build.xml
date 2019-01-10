@@ -16,17 +16,19 @@
  
  <import file="${build.phaster.dir}/${build.profil}/.phaster-common.xml" />
  <import file="${build.phaster.dir}/${build.profil}/.phaster-phase.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/1-source-clone.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/2-source-score.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/3-source-resolve.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/4-source-test.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/5-source-deploy.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/6-source-package.xml" />
- <import file="${build.phaster.dir}/${build.profil}/binary/7-binary-resolve.xml" />
- <import file="${build.phaster.dir}/${build.profil}/binary/8-binary-install.xml" />
- <import file="${build.phaster.dir}/${build.profil}/binary/9-binary-test.xml" />
- <import file="${build.phaster.dir}/${build.profil}/binary/10-binary-score.xml" />
- <import file="${build.phaster.dir}/${build.profil}/binary/11-binary-deploy.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/0-source-prepare.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/1-source-clone.xml" /> 
+ <import file="${build.phaster.dir}/${build.profil}/source/2-source-resolve.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/3-source-compile.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/4-source-score.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/5-source-test.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/6-source-tag.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/source/7-source-package.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/binary/8-binary-deploy.xml" /> 
+ <import file="${build.phaster.dir}/${build.profil}/binary/9-binary-resolve.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/binary/10-binary-host.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/binary/11-binary-test.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/binary/12-binary-score.xml" />
  <import file="${build.phaster.dir}/${build.profil}/12-project-version.xml" />
  
   
