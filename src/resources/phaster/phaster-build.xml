@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="phaster" default="phaster:props" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
  
- <property name="build.build.dir" value="target/build"/>
+ <property name="build.target.dir" value="target/build"/>
  <property name="build.install.bin.dir" value="target/install"/>
  <property name="build.deploy.dir" value="target/deploy"/>
  <property name="build.web.dir" value="target/www"/>
  <property name="build.src.dir" value="src"/>
  <property name="build.test.dir" value="test"/>
- <property name="build.doc.dir" value="${build.build.dir}/docs"/>
- <property name="build.report.dir" value="${build.build.dir}/reports"/>
+ <property name="build.doc.dir" value="${build.target.dir}/docs"/>
+ <property name="build.report.dir" value="${build.target.dir}/reports"/>
  <property name="build.phaster.dir" value="src/resources/phaster" />
  <property name="build.author" value="Solid Design"/>
  <property name="build.email" value="solid.design.com"/>
