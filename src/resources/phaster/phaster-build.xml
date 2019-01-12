@@ -32,8 +32,6 @@
  <import file="${build.phaster.dir}/${build.profil}/binary/9-binary-resolve.xml" />
  <import file="${build.phaster.dir}/${build.profil}/binary/10-binary-host.xml" />
  <import file="${build.phaster.dir}/${build.profil}/binary/11-binary-test.xml" />
- <import file="${build.phaster.dir}/${build.profil}/binary/12-binary-score.xml" />
- <import file="${build.phaster.dir}/${build.profil}/12-project-version.xml" />
- 
+ <import file="${build.phaster.dir}/${build.profil}/binary/12-binary-score.xml" /> 
   
 </project>
