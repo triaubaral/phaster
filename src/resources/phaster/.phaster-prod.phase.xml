@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="phaster" default="phaster:props" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
+ 
+ <target name="08:binary:deploy" depends="binary:deploy:main" description="Deploy binary" />
+
+ <target name="09:binary:resolve" depends="binary:resolve:main" description="Current build's external dependencies installation to make the app to run" />
+
+ <target name="10:binary:host" depends="binary:host:main" description="Current build installation on specific infrastructure" />
+
+ <target name="11:binary:test" depends="binary:test:main" description="Execute functionnal tests" />
+
+ <target name="12:binary:score" depends="binary:score:main" description="Execute performance tests" /> 
+   
+</project>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="phaster" default="phaster:props" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
  
+  <!--*************** /!\ Do not rename nor remove properties suffixed by build keyword /!\*****************-->
  <property name="build.target.dir" value="target"/>
  <property name="build.app.dir" value="${build.target.dir}/app"/>
  <property name="build.bin.dir" value="${build.target.dir}/bin"/>
@@ -11,15 +12,14 @@
  <property name="build.test.dir" value="test"/>
  <property name="build.doc.dir" value="${build.target.dir}/docs"/>
  <property name="build.report.dir" value="${build.target.dir}/reports"/>
- <property name="build.phaster.dir" value="src/resources/phaster" />
-
- <property name="tools.php.bin.dir" value="~/tools/php/bin"/>
+ <property name="build.phaster.dir" value="src/resources/phaster" /> 
  <property name="build.author" value="Solid Design"/>
  <property name="build.email" value="solid.design.com"/>
  <property name="build.profil" value="dev" />
  
+ <!--*************** /!\ Do not rename nor remove import suffixed by build keyword /!\*****************--> 
  <import file="${build.phaster.dir}/${build.profil}/.phaster-common.xml" />
- <import file="${build.phaster.dir}/${build.profil}/.phaster-phase.xml" />
+ <import file="${build.phaster.dir}/${build.profil}/.phaster-${build.profil}-phase.xml" />
  <import file="${build.phaster.dir}/${build.profil}/source/0-source-prepare.xml" />
  <import file="${build.phaster.dir}/${build.profil}/source/1-source-clone.xml" /> 
  <import file="${build.phaster.dir}/${build.profil}/source/2-source-resolve.xml" />

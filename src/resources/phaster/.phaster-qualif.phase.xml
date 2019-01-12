@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="phaster" default="phaster:props" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
+ 
+ <target name="00:source:prepare" depends="source:prepare:main" description="Clean working dir" />
+  
+ <target name="01:source:clone" depends="source:clone:main" description="Copy source and test dir to a build dir" />
+ 
+ <target name="02:source:resolve" depends="source:resolve:main" description="Resolve source dependencies"  />
+ 
+ <target name="03:source:compile" depends="source:compile:main" description="Compile source code"  />
+
+ <target name="04:source:score" depends="source:score:main" description="Analyse source and test written quality" />
+
+ <target name="05:source:test" depends="source:test:main" description="Execute unit tests" />
+	
+ <target name="06:source:track" depends="source:tag:main" description="Deploy source code" />
+
+ <target name="07:source:package" depends="source:package:main" description="Transform source code into binary format" />
+ 
+ <target name="08:binary:deploy" depends="binary:deploy:main" description="Deploy binary" />
+
+ <target name="09:binary:resolve" depends="binary:resolve:main" description="Current build's external dependencies installation to make the app to run" />
+
+ <target name="10:binary:host" depends="binary:host:main" description="Current build installation on specific infrastructure" />
+
+ <target name="11:binary:test" depends="binary:test:main" description="Execute functionnal tests" />
+
+ <target name="12:binary:score" depends="binary:score:main" description="Execute performance tests" /> 
+  
+</project>
