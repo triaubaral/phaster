@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="source:test" default="source:test:main" basedir=".">
 
-<!--source:test tasks -->
-
+<!--********** /!\ Do not rename nor remove the target name : source:test:main  /!\ *************-->
 <target name="source:test:main" hidden="true">
     <echo> TODO !</echo>
 </target>

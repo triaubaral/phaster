@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="binary:score" default="binary:score:main" basedir=".">
 
-<!--binary:score tasks -->
+<!--********** /!\ Do not rename nor remove the target name : binary:score:main  /!\ *************-->
 <target name="binary:score:main" hidden="true">
 	<echo> TODO !</echo>
 </target>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="source:score" default="source:score:main" basedir=".">
 
-	<target name="source:score:main" hidden="true" >
+<!--********** /!\ Do not rename nor remove the target name : source:score:main  /!\ *************-->
+<target name="source:score:main" hidden="true" >
 		<echo message="TODO" />	
-	</target>
+</target>
 
 </project>

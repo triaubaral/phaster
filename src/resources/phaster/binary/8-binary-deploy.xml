@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="binary:deploy" default="binary:deploy:main" basedir=".">
 
-<!--binary:deploy tasks -->
+<!--********** /!\ Do not rename nor remove the target name : binary:deploy:main  /!\ *************-->
 <target name="binary:deploy:main" description="Deploy project's phar to deploy directory" hidden="true">
 	<echo> TODO !</echo>
 
