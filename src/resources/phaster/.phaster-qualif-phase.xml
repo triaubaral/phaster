@@ -13,7 +13,7 @@
 
  <target name="05:source:test" depends="source:test:main" description="Execute unit tests" />
 	
- <target name="06:source:track" depends="source:tag:main" description="Deploy source code" />
+ <target name="06:source:track" depends="source:track:main" description="Source code to save into a specific tag or branch" />
 
  <target name="07:source:package" depends="source:package:main" description="Transform source code into binary format" />
  

@@ -14,12 +14,10 @@ require-dev or require section of your project's `composer.json`
 configuration file, and run 'composer install':
 [source, bash]
 ----
- {
-	"require": {
-		 "triaubaral/phaster": "@dev"       
-	},
+ {	
 	"require-dev": {
 		 "phing/phing": "^2.16"
+		 "triaubaral/phaster": "@dev"
 	 }
   }
 
@@ -29,7 +27,12 @@ configuration file, and run 'composer install':
 
 Copy/paste the following command in your terminal
 
-    ./vendor/bin/phing -f vendor/triaubaral/phaster/build.xml phaster:install
+    ./vendor/bin/phing -f vendor/triaubaral/phaster/build.xml phaster:install -Dprofil=dev
+
+[IMPORTANT]
+====
+The -Dprofil accepted values are : dev, qualif or prod
+====
 
 It installs into src/resources/phaster a directory tree contening all meta tasks
 It installs into the directory where the preceding command has been done a build.xml file
@@ -43,12 +46,10 @@ The command :
  ./vendor/bin/phing -l  
 ---- 
 
-will give the following output :
+will give the following output for the dev profil :
 
 [source, bash]
 ----
-Buildfile: /home/solid/tmp/exo/build.xml
-Warning: target '01:source:clone' has no tasks or dependencies
 Collection of meta task based on phing in order to make your build process easy
 Default target:
 -------------------------------------------------------------------------------
@@ -56,18 +57,19 @@ Default target:
 
 Main targets:
 -------------------------------------------------------------------------------
+ 00:source:prepare   Clean working dir
  01:source:clone     Copy source and test dir to a build dir
- 02:source:score     Analyse source and test written quality
- 03:source:resolve   Resolve source dependencies
- 04:source:test      Execute unit tests
- 05:source:deploy    Deploy source code
- 06:source:package   Transform source code into binary format
- 07:binary:resolve   Current build's external dependencies installation to make the app to run
- 08:binary:install   Current build installation on specific infrastructure
- 09:binary:test      Execute functionnal tests
- 10:binary:score     Execute performance tests
- 11:binary:deploy    Deploy binary
- 12:project:version  Build specific version of your project
+ 02:source:resolve   Resolve source dependencies
+ 03:source:compile   Compile source code
+ 04:source:score     Analyse source and test written quality
+ 05:source:test      Execute unit tests
+ 06:source:track     Deploy source code
+ 07:source:package   Transform source code into binary format
+ 08:binary:deploy    Deploy binary
+ 09:binary:resolve   Current build's external dependencies installation to make the app to run
+ 10:binary:host      Current build installation on specific infrastructure
+ 11:binary:test      Execute functionnal tests
+ 12:binary:score     Execute performance tests
 ----
 
 == How it works !
