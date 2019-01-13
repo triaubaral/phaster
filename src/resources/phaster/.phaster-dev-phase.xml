@@ -7,9 +7,9 @@
  
  <target name="02:source:resolve" depends="01:source:clone,source:resolve:main" description="Resolve source dependencies"  />
  
- <target name="03:source:compile" depends="02:source:resolve,source:compile:main" description="Compile source code"  />
+ <target name="03:source:translate" depends="02:source:resolve,source:translate:main" description="Compile source code"  />
 
- <target name="04:source:score" depends="03:source:compile, source:score:main" description="Analyse source and test written quality" />
+ <target name="04:source:score" depends="03:source:translate, source:score:main" description="Analyse source and test written quality" />
 
  <target name="05:source:test" depends="04:source:score, source:test:main" description="Execute unit tests" />
 	
@@ -21,9 +21,9 @@
 
  <target name="09:binary:resolve" depends="08:binary:deploy,binary:resolve:main" description="Current build's external dependencies installation to make the app to run" />
 
- <target name="10:binary:host" depends="09:binary:resolve,binary:host:main" description="Current build installation on specific infrastructure" />
+ <target name="10:binary:install" depends="09:binary:resolve,binary:install:main" description="Current build installation on specific infrastructure" />
 
- <target name="11:binary:test" depends="10:binary:host,binary:test:main" description="Execute functionnal tests" />
+ <target name="11:binary:test" depends="10:binary:install,binary:test:main" description="Execute functionnal tests" />
 
  <target name="12:binary:score" depends="11:binary:test,binary:score:main" description="Execute performance tests" />  
   

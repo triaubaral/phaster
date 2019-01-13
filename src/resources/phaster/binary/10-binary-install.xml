@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="binary:host" default="binaray:host:main" basedir=".">
+<project name="binary:install" default="binaray:install:main" basedir=".">
 
 <!--********** /!\ Do not rename nor remove the target name : binary:host:main  /!\ *************-->
-<target name="binary:host:main" description="Install binary to a specific location" hidden="true">
+<target name="binary:install:main" description="Install binary to a specific location" hidden="true">
 
 	<echo> TODO !</echo>
 

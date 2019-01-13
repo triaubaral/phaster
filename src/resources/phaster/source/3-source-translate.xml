@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="source:translate" default="source:translate:main" basedir=".">
+
+<!--********** /!\ Do not rename nor remove the target name : source:translate:main  /!\ *************-->
+<target name="source:translate:main" hidden="true">
+
+	<echo message="TODO" />	
+
+</target>
+
+
+</project>

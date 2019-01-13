@@ -17,21 +17,14 @@
  <property name="build.email" value="solid.design.com"/>
  <property name="build.profil" value="dev" />
  
- <!--*************** /!\ Do not rename nor remove import suffixed by build keyword /!\*****************--> 
- <import file="${build.phaster.dir}/${build.profil}/.phaster-common.xml" />
- <import file="${build.phaster.dir}/${build.profil}/.phaster-${build.profil}-phase.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/0-source-prepare.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/1-source-clone.xml" /> 
- <import file="${build.phaster.dir}/${build.profil}/source/2-source-resolve.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/3-source-compile.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/4-source-score.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/5-source-test.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/6-source-track.xml" />
- <import file="${build.phaster.dir}/${build.profil}/source/7-source-package.xml" />
- <import file="${build.phaster.dir}/${build.profil}/binary/8-binary-deploy.xml" /> 
- <import file="${build.phaster.dir}/${build.profil}/binary/9-binary-resolve.xml" />
- <import file="${build.phaster.dir}/${build.profil}/binary/10-binary-host.xml" />
- <import file="${build.phaster.dir}/${build.profil}/binary/11-binary-test.xml" />
- <import file="${build.phaster.dir}/${build.profil}/binary/12-binary-score.xml" /> 
-  
+ <!--*************** /!\ Do not remove the following import  /!\*****************--> 
+ <import>
+  <fileset dir="${build.phaster.dir}/${build.profil}">
+       <include name="source/**.xml" />
+       <include name="binary/**.xml" />
+       <include name=".phaster-common.xml" />
+       <include name=".phaster-${build.profil}-phase.xml" />
+  </fileset>
+ </import> 
+
 </project>
