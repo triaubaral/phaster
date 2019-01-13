@@ -8,18 +8,19 @@
 	<property name="install.dir" value="${resources.dir}/${profil}" />
 	<property name="from.resources.dir" value="vendor/triaubaral/phaster/${resources.dir}" />
 	
-    <mkdir dir="${install.dir}" />
+  <mkdir dir="${install.dir}" />
   
 	<copy todir="${install.dir}" >
 	  <fileset dir="${from.resources.dir}">
-		<include name="**/**" />
-	  </fileset>
+			<include name="binary/**" />
+			<include name="source/**" />
+			<include name=".phaster-common.xml" />
+			<include name=".phaster-${profil}-phase.xml" />
+		</fileset>
 	</copy>
 		
-	<move file="${install.dir}/phaster-build.xml" tofile="build.xml" overwrite="false"/>
+	<copy file="${install.dir}/phaster-build.xml" tofile="build.xml" overwrite="false"/>
 	
   </target>
-  
-  
   
 </project>
