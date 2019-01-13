@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="source:resolve" default="source:resolve:main" basedir=".">
+<project name="@@profil@@sr" default="source:resolve:main" basedir=".">
 
 <!--********** /!\ Do not rename nor remove the target name : source:resolve:main  /!\ *************-->
 <target name="source:resolve:main" hidden="true">

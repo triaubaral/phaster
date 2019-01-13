@@ -11,6 +11,11 @@
   <mkdir dir="${install.dir}" />
   
 	<copy todir="${install.dir}" >
+		<filterchain>
+			<replacetokens begintoken="@@" endtoken="@@">
+				<token key="profil" value="${profil}" />
+			</replacetokens>
+		</filterchain>
 	  <fileset dir="${from.resources.dir}">
 			<include name="binary/**" />
 			<include name="source/**" />

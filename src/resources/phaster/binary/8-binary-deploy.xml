@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="binary:deploy" default="binary:deploy:main" basedir=".">
+<project name="@@profil@@bd" default="binary:deploy:main" basedir=".">
 
 <!--********** /!\ Do not rename nor remove the target name : binary:deploy:main  /!\ *************-->
 <target name="binary:deploy:main" description="Deploy project's phar to deploy directory" hidden="true">

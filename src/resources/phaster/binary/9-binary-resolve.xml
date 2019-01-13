@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="binary:resolve" default="binary:resolve:main" basedir=".">
+<project name="${profilFirstLetter}br" default="binary:resolve:main" basedir=".">
 
 <!--********** /!\ Do not rename nor remove the target name : binary:resolve:main  /!\ *************-->
 <target name="binary:resolve:main" hidden="true">

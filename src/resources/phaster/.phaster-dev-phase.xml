@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="phaster" default="phaster:props" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
+<project name="phaster-dev" default="phaster:props" basedir="." description="Collection of meta task based on phing in order to make your build process easy">
  
  <target name="00:source:prepare" depends="source:prepare:main" description="Clean working dir" />
   

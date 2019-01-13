@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="binaray:test" default="binaray:test:main" basedir=".">
+<project name="@@profil@@bt" default="binaray:test:main" basedir=".">
 
 <!--********** /!\ Do not rename nor remove the target name : binary:test:main  /!\ *************-->
 <target name="binary:test:main" hidden="true">

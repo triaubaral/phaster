@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="binary:score" default="binary:score:main" basedir=".">
+<project name="@@profil@@bs" default="binary:score:main" basedir=".">
 
 <!--********** /!\ Do not rename nor remove the target name : binary:score:main  /!\ *************-->
 <target name="binary:score:main" hidden="true">
