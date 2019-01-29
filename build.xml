@@ -21,6 +21,7 @@
 			<include name="source/**" />
 			<include name=".phaster-common.xml" />
 			<include name=".phaster-${profil}-phase.xml" />
+		  	<include name="phaster-build.xml" />
 		</fileset>
 	</copy>
 		
